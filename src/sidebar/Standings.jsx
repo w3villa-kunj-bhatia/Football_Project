@@ -1,26 +1,34 @@
 import { useState } from "react";
 
+import chelsea from "../assets/teams/chelsea.png";
+import liverpool from "../assets/teams/liverpool.png";
+import manCity from "../assets/teams/man-city.png";
+import manUnited from "../assets/teams/man-united.png";
+import premierLeague from "../assets/leagues/premierLeague.png";
+
+const logos = [chelsea, liverpool, manCity, manUnited];
+
 const teams = [
-  { name: "Chelsea", pts: 24 },
-  { name: "Man City", pts: 21 },
-  { name: "Liverpool", pts: 20 },
-  { name: "Man United", pts: 18 },
-  { name: "Arsenal", pts: 16 },
-  { name: "Tottenham", pts: 14 },
-  { name: "Bournemouth", pts: 10 },
-  { name: "Brentford", pts: 10 },
-  { name: "Burnley", pts: 9 },
-  { name: "Fulham", pts: 9 },
-  { name: "Leeds", pts: 9 },
-  { name: "Nottingham", pts: 7 },
-  { name: "Forest", pts: 7 },
-  { name: "Wolves", pts: 6 },
-  { name: "Aston Villa", pts: 6 },
-  { name: "Brighton", pts: 5 },
-  { name: "Crystal Palace", pts: 4 },
-  { name: "Everton", pts: 2 },
-  { name: "West Ham", pts: 1 },
-  { name: "Southhampton", pts: 0 },
+  { name: "Chelsea", stats: [14, 13, 22] },
+  { name: "Liverpool", stats: [14, 10, 21] },
+  { name: "Man City", stats: [14, 15, 20] },
+  { name: "Man United", stats: [14, 8, 18] },
+  { name: "Arsenal", stats: [14, 6, 16] },
+  { name: "Tottenham", stats: [14, 4, 14] },
+  { name: "Bourne", stats: [14, -2, 10] },
+  { name: "Brentford", stats: [14, -2, 10] },
+  { name: "Burnley", stats: [14, -5, 9] },
+  { name: "Fulham", stats: [14, -5, 9] },
+  { name: "Leeds", stats: [14, -3, 9] },
+  { name: "Nottingham", stats: [14, -6, 7] },
+  { name: "Forest", stats: [14, -6, 7] },
+  { name: "Wolves", stats: [14, -8, 6] },
+  { name: "Aston Villa", stats: [14, -8, 6] },
+  { name: "Brighton", stats: [14, -10, 5] },
+  { name: "Spurs", stats: [14, -11, 4] },
+  { name: "Everton", stats: [14, -15, 2] },
+  { name: "West Ham", stats: [14, -18, 1] },
+  { name: "South Ham", stats: [14, -20, 0] },
 ];
 
 const leagues = [
@@ -36,7 +44,14 @@ export default function Standings() {
 
   return (
     <div>
-      <h2 className="text-xl font-semibold mb-2">Standings</h2>
+      <div className="flex items-center gap-2 mb-2 ml-2">
+        <h2 className="text-xl font-semibold">Standings</h2>
+        <img
+          src={premierLeague}
+          alt="Premier League"
+          className="w-6 h-6 object-contain ml-20"
+        />
+      </div>
 
       <div className="relative mb-3">
         <button
@@ -58,7 +73,7 @@ export default function Standings() {
         </button>
 
         {open && (
-          <div className="absolute left-0 right-0 mt-2 bg-card rounded-md border border-slate-800 z-50">
+          <div className="absolute left-0 right-0 mt-1 bg-bg rounded-md border border-slate-800 z-50">
             {leagues.map((league) => (
               <button
                 key={league}
@@ -66,7 +81,7 @@ export default function Standings() {
                   setSelectedLeague(league);
                   setOpen(false);
                 }}
-                className="w-full text-left px-3 py-2 text-sm hover:bg-bg transition"
+                className="w-full text-left px-3 py-2 text-sm hover:bg-card transition"
               >
                 {league}
               </button>
@@ -79,23 +94,34 @@ export default function Standings() {
         {teams.map((team, index) => {
           let rowClasses = "bg-bg";
 
-          if (index < 4) {
-            rowClasses = "bg-[#1a2039]";
-          } else if (index === 4) {
-            rowClasses = "bg-[#f47e01]";
-          } else if (index >= teams.length - 3) {
-            rowClasses = "bg-[#b70000]";
-          }
+          if (index < 4) rowClasses = "bg-[#1a2039]";
+          else if (index === 4) rowClasses = "bg-[#f47e01]";
+          else if (index >= teams.length - 3) rowClasses = "bg-[#b70000]";
+
+          const logo = logos[index % logos.length];
 
           return (
             <div
               key={team.name}
               className={`flex justify-between items-center rounded-md px-3 py-2 ${rowClasses}`}
             >
-              <span>
-                {index + 1} {team.name}
-              </span>
-              <span className="font-medium">{team.pts}</span>
+              <div className="flex items-center gap-2">
+                <span className="w-4 text-right">{index + 1}</span>
+
+                <img
+                  src={logo}
+                  alt="Team logo"
+                  className="w-4.5 h-4.5 object-contain"
+                />
+
+                <span>{team.name}</span>
+              </div>
+
+              <div className="flex items-center gap-3 text-xs font-medium">
+                <span>{team.stats[0]}</span>
+                <span>{team.stats[1]}</span>
+                <span>{team.stats[2]}</span>
+              </div>
             </div>
           );
         })}

@@ -4,10 +4,10 @@ import { faG } from "@fortawesome/free-solid-svg-icons";
 import Standings from "./Standings";
 import Card from "../components/ui/Card";
 
-import premierLeague from "../assets/premierLeague.png";
-import championsLeague from "../assets/uefa.png";
-import laliga from "../assets/laliga.png";
-import international from "../assets/fifa.png";
+import premierLeague from "../assets/leagues/premierLeague.png";
+import championsLeague from "../assets/leagues/uefa.png";
+import laliga from "../assets/leagues/laliga.png";
+import international from "../assets/leagues/fifa.png";
 
 const leagues = [
   { name: "Premier League", icon: premierLeague },
@@ -19,7 +19,6 @@ const leagues = [
 export default function SidebarLeft() {
   return (
     <aside className="flex flex-col gap-4 h-full text-white">
-      
       <Card>
         <div className="flex items-center gap-1 mb-4 ml-2">
           <FontAwesomeIcon icon={faG} className="text-3xl" />
@@ -45,7 +44,7 @@ export default function SidebarLeft() {
 
           <input
             placeholder="Search"
-            className="w-full bg-bg placeholder:text-slate-100 text-slate-100 text-sm rounded-md pl-10 pr-4 py-2 outline-none"
+            className="w-full bg-bg placeholder:text-slate-100 text-slate-100 text-sm rounded-md pl-10 pr-4 py-2 outline-none text-center"
           />
         </div>
 
@@ -54,7 +53,7 @@ export default function SidebarLeft() {
           {leagues.map((league) => (
             <li
               key={league.name}
-              className="flex items-center gap-3 px-2 py-2 rounded-md hover:bg-bg cursor-pointer text-sm"
+              className="flex items-center gap-3 px-2 py-1 rounded-md hover:bg-bg cursor-pointer text-sm"
             >
               <img
                 src={league.icon}
