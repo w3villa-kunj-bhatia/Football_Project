@@ -4,7 +4,6 @@ import { faG } from "@fortawesome/free-solid-svg-icons";
 import Standings from "./Standings";
 import Card from "../components/ui/Card";
 
-// local league icons
 import premierLeague from "../assets/premierLeague.png";
 import championsLeague from "../assets/uefa.png";
 import laliga from "../assets/laliga.png";
@@ -21,15 +20,12 @@ export default function SidebarLeft() {
   return (
     <aside className="flex flex-col gap-4 h-full text-white">
       
-      {/* Top Card */}
       <Card>
-        {/* Logo */}
-        <div className="flex items-center gap-3 mb-4">
+        <div className="flex items-center gap-1 mb-4 ml-2">
           <FontAwesomeIcon icon={faG} className="text-3xl" />
           <h1 className="text-2xl font-bold">GOLVIO</h1>
         </div>
 
-        {/* Search */}
         <div className="relative mb-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +49,6 @@ export default function SidebarLeft() {
           />
         </div>
 
-        {/* Top Leagues */}
         <h2 className="text-xl font-semibold mb-3">Top Leagues</h2>
         <ul className="space-y-2">
           {leagues.map((league) => (
@@ -72,7 +67,6 @@ export default function SidebarLeft() {
         </ul>
       </Card>
 
-      {/* Standings Card */}
       <Card className="flex-1 overflow-hidden">
         <Standings />
       </Card>

@@ -23,7 +23,12 @@ const teams = [
   { name: "Southhampton", pts: 0 },
 ];
 
-const leagues = ["Premier League", "Champions League", "La Liga", "International"];
+const leagues = [
+  "Premier League",
+  "Champions League",
+  "La Liga",
+  "International",
+];
 
 export default function Standings() {
   const [open, setOpen] = useState(false);
@@ -32,6 +37,7 @@ export default function Standings() {
   return (
     <div>
       <h2 className="text-xl font-semibold mb-2">Standings</h2>
+
       <div className="relative mb-3">
         <button
           onClick={() => setOpen(!open)}
@@ -39,7 +45,7 @@ export default function Standings() {
         >
           <span>{selectedLeague}</span>
           <svg
-            className={`w-6 h-6 transition-transform mr-0 ${
+            className={`w-6 h-6 transition-transform ${
               open ? "rotate-180" : ""
             }`}
             fill="none"
@@ -70,17 +76,29 @@ export default function Standings() {
       </div>
 
       <div className="space-y-2 text-sm">
-        {teams.map((team, index) => (
-          <div
-            key={team.name}
-            className="flex justify-between bg-bg rounded-md px-3 py-2"
-          >
-            <span>
-              {index + 1}. {team.name}
-            </span>
-            <span className="font-medium">{team.pts}</span>
-          </div>
-        ))}
+        {teams.map((team, index) => {
+          let rowClasses = "bg-bg";
+
+          if (index < 4) {
+            rowClasses = "bg-[#1a2039]";
+          } else if (index === 4) {
+            rowClasses = "bg-[#f47e01]";
+          } else if (index >= teams.length - 3) {
+            rowClasses = "bg-[#b70000]";
+          }
+
+          return (
+            <div
+              key={team.name}
+              className={`flex justify-between items-center rounded-md px-3 py-2 ${rowClasses}`}
+            >
+              <span>
+                {index + 1} {team.name}
+              </span>
+              <span className="font-medium">{team.pts}</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
