@@ -9,7 +9,7 @@ export default {
         // accent: "#FACC15",
       },
       fontSize: {
-        s: "16px",
+        sm: "16px",
         m: "18px",
         l: "22px",
       },

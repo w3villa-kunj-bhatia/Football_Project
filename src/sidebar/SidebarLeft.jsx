@@ -49,12 +49,12 @@ export default function SidebarLeft() {
           </div>{" "}
         </div>
 
-        <h2 className="text-sm font-semibold mb-3 mt-3">Top Leagues</h2>
+        <h2 className="text-xl font-semibold mb-3 mt-8">Top Leagues</h2>
         <ul className="space-y-2">
           {leagues.map((league) => (
             <li
               key={league.name}
-              className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-bg cursor-pointer text-sm"
+              className="flex items-center gap-2 py-1 rounded-md hover:bg-bg cursor-pointer text-sm"
             >
               <FontAwesomeIcon icon={league.icon} className="text-muted" />
               <span>{league.name}</span>
