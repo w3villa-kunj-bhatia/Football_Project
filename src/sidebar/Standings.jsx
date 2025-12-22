@@ -1,8 +1,8 @@
 const teams = [
-  { name: "Chelsea", pts: 22 },
-  { name: "Man City", pts: 22 },
-  { name: "Liverpool", pts: 22 },
-  { name: "Man United", pts: 22 }
+  { name: "Chelsea", pts: 24 },
+  { name: "Man City", pts: 21 },
+  { name: "Liverpool", pts: 12 },
+  { name: "Man United", pts: 8 }
 ];
 
 export default function Standings() {

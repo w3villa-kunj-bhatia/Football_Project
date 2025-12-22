@@ -3,12 +3,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: "#1E1E1E",
-        card: "#2A2A2A",
-        muted: "#9CA3AF",
-        accent: "#FACC15"
-      }
-    }
+        bg: "#303030",
+        card: "#222222",
+        // muted: "#9CA3AF",
+        // accent: "#FACC15",
+      },
+      fontSize: {
+        s: "16px",
+        m: "18px",
+        l: "22px",
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };
