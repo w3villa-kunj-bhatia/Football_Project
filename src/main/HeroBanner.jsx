@@ -1,7 +1,11 @@
 export default function HeroBanner() {
   return (
-    <div className="h-48 bg-card rounded-xl flex items-center justify-center text-2xl font-bold">
-      Featured Match
+    <div className="h-64 w-full bg-card rounded-xl overflow-hidden shadow-lg">
+      <img 
+        src="https://medianews.az/storage/7283/conversions/01K8FNS9CDYGEJS9JKD1ME78MF-large.jpg" 
+        alt="Football Hero Banner"
+        className="w-full h-full object-cover object-[center_15%]" 
+      />
     </div>
   );
 }
