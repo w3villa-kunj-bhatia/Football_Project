@@ -3,16 +3,27 @@ import { useState } from "react";
 const teams = [
   { name: "Chelsea", pts: 24 },
   { name: "Man City", pts: 21 },
-  { name: "Liverpool", pts: 12 },
-  { name: "Man United", pts: 8 },
+  { name: "Liverpool", pts: 20 },
+  { name: "Man United", pts: 18 },
+  { name: "Arsenal", pts: 16 },
+  { name: "Tottenham", pts: 14 },
+  { name: "Bournemouth", pts: 10 },
+  { name: "Brentford", pts: 10 },
+  { name: "Burnley", pts: 9 },
+  { name: "Fulham", pts: 9 },
+  { name: "Leeds", pts: 9 },
+  { name: "Nottingham", pts: 7 },
+  { name: "Forest", pts: 7 },
+  { name: "Wolves", pts: 6 },
+  { name: "Aston Villa", pts: 6 },
+  { name: "Brighton", pts: 5 },
+  { name: "Crystal Palace", pts: 4 },
+  { name: "Everton", pts: 2 },
+  { name: "West Ham", pts: 1 },
+  { name: "Southhampton", pts: 0 },
 ];
 
-const leagues = [
-  "Premier League",
-  "La Liga",
-  "Serie A",
-  "Bundesliga",
-];
+const leagues = ["Premier League", "Champions League", "La Liga", "International"];
 
 export default function Standings() {
   const [open, setOpen] = useState(false);
@@ -28,7 +39,7 @@ export default function Standings() {
         >
           <span>{selectedLeague}</span>
           <svg
-            className={`w-4 h-4 transition-transform ${
+            className={`w-6 h-6 transition-transform mr-0 ${
               open ? "rotate-180" : ""
             }`}
             fill="none"
