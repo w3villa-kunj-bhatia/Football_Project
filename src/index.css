@@ -8,5 +8,5 @@
 
 body {
   @apply bg-bg text-white font-sans;
-  font-family: var(--default-font-family);
+  font-family: "Space-Grotesk", system-ui, sans-serif;
 }

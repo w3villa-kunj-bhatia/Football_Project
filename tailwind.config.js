@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
@@ -5,8 +6,9 @@ export default {
       colors: {
         bg: "#303030",
         card: "#222222",
-        // muted: "#9CA3AF",
-        // accent: "#FACC15",
+      },
+      fontFamily: {
+        sans: ["Space Grotesk", "system-ui", "sans-serif"],
       },
       fontSize: {
         sm: "16px",
