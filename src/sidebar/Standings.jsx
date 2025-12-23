@@ -88,12 +88,9 @@ export default function Standings() {
             ))}
           </div>
         )}
-      </div>
 
-      <div className="space-y-2 text-sm">
         {teams.map((team, index) => {
           let rowClasses = "bg-bg";
-
           if (index < 4) rowClasses = "bg-[#1a2039]";
           else if (index === 4) rowClasses = "bg-[#f47e01]";
           else if (index >= teams.length - 3) rowClasses = "bg-[#b70000]";
@@ -103,24 +100,24 @@ export default function Standings() {
           return (
             <div
               key={team.name}
-              className={`flex justify-between items-center rounded-md px-3 py-2 ${rowClasses}`}
+              className={`text-sm flex justify-between items-center rounded-md px-1 py-1.5 gap-1 mt-2.5 ${rowClasses}`}
             >
-              <div className="flex items-center gap-2">
-                <span className="w-4 text-right">{index + 1}</span>
+              <div className="flex items-center gap-2.5 flex-1">
+                <span className="w-5 shrink-0 text-right">{index + 1}</span>
 
                 <img
                   src={logo}
                   alt="Team logo"
-                  className="w-4.5 h-4.5 object-contain"
+                  className="w-4 h-4 shrink-0 object-contain"
                 />
 
-                <span>{team.name}</span>
+                <span className="truncate">{team.name}</span>
               </div>
 
-              <div className="flex items-center gap-3 text-xs font-medium">
-                <span>{team.stats[0]}</span>
-                <span>{team.stats[1]}</span>
-                <span>{team.stats[2]}</span>
+              <div className="flex items-center gap-4 text-xs font-medium shrink-0">
+                <span className="w-4 text-center">{team.stats[0]}</span>
+                <span className="w-4 text-center">{team.stats[1]}</span>
+                <span className="w-4 text-center">{team.stats[2]}</span>
               </div>
             </div>
           );

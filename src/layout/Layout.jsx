@@ -7,7 +7,7 @@ export default function Layout() {
     <div className="grid grid-cols-[260px_1fr_320px] min-h-screen gap-4 p-4">
       <SidebarLeft />
       <MainContent />
-      {/* <SidebarRight /> */}
+      <SidebarRight />
     </div>
   );
 }
