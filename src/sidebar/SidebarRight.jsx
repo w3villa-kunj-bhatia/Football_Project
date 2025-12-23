@@ -25,12 +25,11 @@ export default function SidebarRight() {
 
   return (
     <aside className="flex flex-col gap-2">
-      {/* Theme Switcher */}
       <Card className="flex justify-center p-0.5 w-full">
-        <div className="flex items-center rounded-sm bg-neutral-700 p-1.5 w-full">
+        <div className="flex items-center rounded-md bg-neutral-700 p-1.5 w-full">
           <button
             onClick={() => setTheme("light")}
-            className={`flex flex-1 items-center justify-center gap-2 rounded-sm py-1.5 text-sm font-medium transition ${
+            className={`flex flex-1 items-center justify-center gap-2 rounded-md py-1.5 text-sm font-medium transition ${
               theme === "light"
                 ? "bg-neutral-800 text-white"
                 : "text-neutral-400 hover:text-white"
@@ -41,7 +40,7 @@ export default function SidebarRight() {
           </button>
           <button
             onClick={() => setTheme("dark")}
-            className={`flex flex-1 items-center justify-center gap-2 rounded-sm py-1.5 text-sm font-medium transition ${
+            className={`flex flex-1 items-center justify-center gap-2 rounded-md py-1.5 text-sm font-medium transition ${
               theme === "dark"
                 ? "bg-neutral-800 text-white"
                 : "text-neutral-400 hover:text-white"
@@ -53,14 +52,12 @@ export default function SidebarRight() {
         </div>
       </Card>
 
-      {/* News */}
       <Card className="p-3">
         <div className="mb-3 flex items-center justify-between">
           <h2 className="text-xl font-semibold">News</h2>
           <i className="fa-solid fa-chevron-right text-lime-400 text-xl" />
         </div>
 
-        {/* Featured News */}
         <div className="mb-4 overflow-hidden rounded-sm bg-bg p-1">
           <img
             src="https://images.ctfassets.net/phva2knh4vy5/6yXGzb0DrUPKQwceOUwywB/915f7bb1ae7643580cad2e6ac550f6a9/Brenden_Aaronson_USMNT_Paraguay_Nov_25.jpg"
@@ -78,16 +75,12 @@ export default function SidebarRight() {
                 </p>
               </div>
               <button
-                onClick={() =>
-                  setFeaturedNewsBookmark((prev) => !prev)
-                }
+                onClick={() => setFeaturedNewsBookmark((prev) => !prev)}
                 className="shrink-0"
               >
                 <i
                   className={`${
-                    featuredNewsBookmark
-                      ? "fa-solid"
-                      : "fa-regular"
+                    featuredNewsBookmark ? "fa-solid" : "fa-regular"
                   } fa-bookmark text-lime-400 text-lg`}
                 />
               </button>
@@ -95,7 +88,6 @@ export default function SidebarRight() {
           </div>
         </div>
 
-        {/* News List */}
         <ul className="flex flex-col gap-4 px-1.5">
           {[
             "Heavy On The Top 100 Players And Managers",
@@ -124,9 +116,7 @@ export default function SidebarRight() {
                 >
                   <i
                     className={`${
-                      newsBookmarks[index]
-                        ? "fa-solid"
-                        : "fa-regular"
+                      newsBookmarks[index] ? "fa-solid" : "fa-regular"
                     } fa-bookmark text-lime-400 text-lg`}
                   />
                 </button>
@@ -136,14 +126,12 @@ export default function SidebarRight() {
         </ul>
       </Card>
 
-      {/* Podcast */}
       <Card className="p-3">
         <div className="mb-3 flex items-center justify-between">
           <h2 className="text-xl font-semibold">Podcast</h2>
           <i className="fa-solid fa-chevron-right text-lime-400 text-xl" />
         </div>
 
-        {/* Featured Podcast */}
         <div className="mb-4 overflow-hidden rounded-sm bg-bg p-1">
           <img
             src="https://ichef.bbci.co.uk/images/ic/480x270/p0dxg3x1.jpg"
@@ -161,16 +149,12 @@ export default function SidebarRight() {
                 </p>
               </div>
               <button
-                onClick={() =>
-                  setFeaturedPodcastBookmark((prev) => !prev)
-                }
+                onClick={() => setFeaturedPodcastBookmark((prev) => !prev)}
                 className="shrink-0"
               >
                 <i
                   className={`${
-                    featuredPodcastBookmark
-                      ? "fa-solid"
-                      : "fa-regular"
+                    featuredPodcastBookmark ? "fa-solid" : "fa-regular"
                   } fa-bookmark text-lime-400 text-lg`}
                 />
               </button>
@@ -178,7 +162,6 @@ export default function SidebarRight() {
           </div>
         </div>
 
-        {/* Podcast List */}
         <ul className="flex flex-col gap-4 px-1.5">
           {[
             "Here Are The Top 100 Players And Managers",
@@ -207,9 +190,7 @@ export default function SidebarRight() {
                 >
                   <i
                     className={`${
-                      podcastBookmarks[index]
-                        ? "fa-solid"
-                        : "fa-regular"
+                      podcastBookmarks[index] ? "fa-solid" : "fa-regular"
                     } fa-bookmark text-lime-400 text-lg`}
                   />
                 </button>
