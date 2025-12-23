@@ -10,9 +10,7 @@ export default function Footer() {
             <div className="flex h-9 w-9 items-center justify-center rounded-md">
               <FontAwesomeIcon icon={faG} className="text-4xl" />
             </div>
-            <span className="text-2xl font-semibold tracking-wide">
-              GOLVIO
-            </span>
+            <span className="text-2xl font-semibold tracking-wide">GOLVIO</span>
           </div>
 
           <p className="max-w-xs text-lg leading-relaxed font-bold">
@@ -22,28 +20,30 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-2 text-sm text-neutral-300">
-          <a href="#" className="hover:text-white">Matches</a>
-          <a href="#" className="hover:text-white">News</a>
-          <a href="#" className="hover:text-white">About us</a>
-          <a href="#" className="hover:text-white">Advertise</a>
-          <a href="#" className="hover:text-white">Guess the score</a>
-          <a href="#" className="hover:text-white">FAQ</a>
-          <a href="#" className="hover:text-white">Newsletter</a>
+        <div className="flex flex-col gap-2 text-md ml-40">
+          <a href="#">Matches</a>
+          <a href="#">News</a>
+          <a href="#">About us</a>
+          <a href="#">Advertise</a>
+          <a href="#">Guess the score</a>
+          <a href="#">FAQ</a>
+          <a href="#">Newsletter</a>
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 border-t border-neutral-700 px-8 py-4 text-xs md:flex-row md:items-center md:justify-between">
-        <span>© Copyright 2025 Golvio</span>
+      <div className="border-t border-neutral-800 px-10 py-5 text-xs">
+        <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-start">
+          <span className="leading-tight">© Copyright 2025 Golvio</span>
 
-        <p className="max-w-sm text-center leading-relaxed md:text-left">
-          Terms of use · Cookie policy · Privacy policy
-          <br />
-          The use of automatic services (robots, crawlers, indexing etc.)
-          as well as other methods or systematic or regular use is not permitted.
-        </p>
+          <p className="max-w-sm leading-relaxed">
+            Terms of use · Cookie policy · Privacy policy
+            <br />
+            The use of automatic services (robots, crawlers, indexing etc.) as
+            well as other methods or systematic or regular use is not permitted.
+          </p>
 
-        <span className="text-white">Follow us</span>
+          <span className="text-white leading-tight">Follow us</span>
+        </div>
       </div>
     </footer>
   );
