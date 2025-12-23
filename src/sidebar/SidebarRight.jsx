@@ -25,8 +25,8 @@ export default function SidebarRight() {
 
   return (
     <aside className="flex flex-col gap-2">
-      <Card className="flex justify-center p-0.5 w-full">
-        <div className="flex items-center rounded-md bg-neutral-700 p-1.5 w-full">
+      <Card className="flex justify-center w-full pt-3 pb-3">
+        <div className="flex items-center rounded-md bg-neutral-700 p-1 w-60">
           <button
             onClick={() => setTheme("light")}
             className={`flex flex-1 items-center justify-center gap-2 rounded-md py-1.5 text-sm font-medium transition ${
