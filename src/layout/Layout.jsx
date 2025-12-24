@@ -7,10 +7,16 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col bg-bg">
       <div className="flex-1 p-4">
-        <div className="grid grid-cols-[260px_1fr_320px] gap-4">
-          <SidebarLeft />
+        <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr_320px] gap-4">
+          <div className="hidden lg:block">
+            <SidebarLeft />
+          </div>
+
           <MainContent />
-          <SidebarRight />
+
+          <div className="hidden lg:block">
+            <SidebarRight />
+          </div>
         </div>
       </div>
       <Footer />

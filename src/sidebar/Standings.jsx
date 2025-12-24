@@ -12,15 +12,15 @@ const teams = [
   { name: "Chelsea", stats: [14, 13, 22] },
   { name: "Liverpool", stats: [14, 10, 21] },
   { name: "Man City", stats: [14, 15, 20] },
-  { name: "Man United", stats: [14, 8, 18] },
+  { name: "Man Utd", stats: [14, 8, 18] },
   { name: "Arsenal", stats: [14, 6, 16] },
-  { name: "Tottenham", stats: [14, 4, 14] },
+  { name: "Totteham", stats: [14, 4, 14] },
   { name: "Bourne", stats: [14, -2, 10] },
   { name: "Brentford", stats: [14, -2, 10] },
   { name: "Burnley", stats: [14, -5, 9] },
   { name: "Fulham", stats: [14, -5, 9] },
   { name: "Leeds", stats: [14, -3, 9] },
-  { name: "Nottingham", stats: [14, -6, 7] },
+  { name: "Notting", stats: [14, -6, 7] },
   { name: "Forest", stats: [14, -6, 7] },
   { name: "Wolves", stats: [14, -8, 6] },
   { name: "Aston Villa", stats: [14, -8, 6] },
@@ -28,7 +28,7 @@ const teams = [
   { name: "Spurs", stats: [14, -11, 4] },
   { name: "Everton", stats: [14, -15, 2] },
   { name: "West Ham", stats: [14, -18, 1] },
-  { name: "South Ham", stats: [14, -20, 0] },
+  { name: "Hamshire", stats: [14, -20, 0] },
 ];
 
 const leagues = [

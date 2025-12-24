@@ -4,12 +4,12 @@ import MatchesTable from "./MatchesTable";
 
 export default function MatchHeader() {
   const days = [
-    { label: "Wednesday", date: "09 Aug" },
     { label: "Yesterday", date: "10 Aug" },
     { label: "Today", date: "11 Aug", active: true },
     { label: "Tomorrow", date: "12 Aug" },
     { label: "Sunday", date: "13 Aug" },
     { label: "Sunday", date: "13 Aug" },
+    { label: "Monday", date: "14 Aug" },
   ];
 
   return (

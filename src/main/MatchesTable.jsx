@@ -121,20 +121,29 @@ export default function MatchesTable() {
                 className="grid grid-cols-[70px_1fr_70px_1fr] items-center px-4 py-3 text-sm"
               >
                 <div
-                  className={
+                  className={`hidden lg:block ${
                     match.live ? "text-lime-400 font-medium" : "text-muted"
-                  }
+                  }`}
                 >
                   {match.time}
                 </div>
 
-                <TeamCell name={match.home} align="right" />
+                <div className="grid grid-cols-[1fr_70px_1fr] lg:contents col-span-4 lg:col-span-1">
+                  <TeamCell name={match.home} align="right" />
 
-                <div className="text-center font-semibold">
-                  {match.score ?? "—"}
+                  <div className="text-center font-semibold">
+                    {match.score ?? (
+                      <>
+                        <span className="lg:hidden text-xs text-muted font-normal">
+                          {match.time}
+                        </span>
+                        <span className="hidden lg:inline">—</span>
+                      </>
+                    )}
+                  </div>
+
+                  <TeamCell name={match.away} align="left" />
                 </div>
-
-                <TeamCell name={match.away} align="left" />
               </div>
             ))}
           </div>
